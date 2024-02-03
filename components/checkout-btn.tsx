@@ -1,6 +1,17 @@
-import React from "react";
+"use client";
 
-function CheckOutButton() {
+import { useSession } from "next-auth/react";
+
+function CheckoutButton() {
+  const { data: session } = useSession();
+
+  const createCheckoutSession = async () => {
+    if (!session) return;
+    // push a doc to firebase db
+    // ... stripe extention on firebase will create a checkout  session
+    // redirect user to checkout page
+  };
+
   return (
     <div>
       {/* If subscribed show me the user is subscribed */}
@@ -11,4 +22,4 @@ function CheckOutButton() {
   );
 }
 
-export default CheckOutButton;
+export default CheckoutButton;

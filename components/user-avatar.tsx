@@ -13,7 +13,7 @@ function UserAvatar({ name, image, className }: props) {
       {image && (
         <Image
           src={image}
-          alt={name || "User Name"}
+          alt={name}
           width={40}
           height={40}
           className="rounded-full"

@@ -28,7 +28,10 @@ function UserButton({ session }: Props) {
     session && (
       <DropdownMenu>
         <DropdownMenuTrigger>
-          <UserAvatar name={session.user?.name} image={session.user?.image} />
+          <UserAvatar
+            name={session.user?.name || "User Name"}
+            image={session.user?.image || "https://github.com/shadcn.png"}
+          />
         </DropdownMenuTrigger>
         <DropdownMenuContent>
           <DropdownMenuLabel>{session.user?.name}</DropdownMenuLabel>
