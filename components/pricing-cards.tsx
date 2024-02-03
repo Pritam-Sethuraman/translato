@@ -2,7 +2,7 @@ import React from "react";
 import { tierData } from "@/lib/data";
 import { CheckIcon } from "lucide-react";
 import Link from "next/link";
-import CheckOutButton from "@/components/check-out-btn";
+import CheckOutButton from "@/components/checkout-btn";
 
 type Props = {
   redirect: boolean;
