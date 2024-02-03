@@ -3,8 +3,8 @@ import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import Image from "next/image";
 
 type props = {
-  name: string;
-  image: string;
+  name: string | "";
+  image: string | "";
   className?: string;
 };
 function UserAvatar({ name, image, className }: props) {
@@ -13,13 +13,13 @@ function UserAvatar({ name, image, className }: props) {
       {image && (
         <Image
           src={image}
-          alt={name}
+          alt={name || "User Name"}
           width={40}
           height={40}
           className="rounded-full"
         />
       )}
-      <AvatarImage src="https://github.com/shadcn.png" />
+      <AvatarImage src={image} />
       <AvatarFallback className="dark:bg-white dark:text-black text-lg">
         {name
           ?.split(" ")

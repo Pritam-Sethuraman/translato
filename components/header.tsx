@@ -4,11 +4,11 @@ import ThemeToggle from "@/components/theme-toggle";
 import UserButton from "@/components/user-btn";
 import { getServerSession } from "next-auth";
 import Link from "next/link";
-import { ChatBubbleLeftRightIcon } from "@heroicons/react/24/outline";
+import { MessagesSquare } from "lucide-react";
+import CreateChatButton from "@/components/create-chat-btn";
 
 async function Header() {
   const session = await getServerSession(authOptions);
-  console.log(session);
 
   return (
     <header className="sticky top-0 z-50 bg-white dark:bg-gray-900">
@@ -20,9 +20,9 @@ async function Header() {
           {session ? (
             <>
               <Link href={"/chat"} prefetch={false}>
-                <ChatBubbleLeftRightIcon className="text-black dark:text-white" />
+                <MessagesSquare className="text-black dark:text-white" />
               </Link>
-              chat
+              <CreateChatButton />
             </>
           ) : (
             <Link href="/pricing" prefetch={true}>
@@ -30,7 +30,6 @@ async function Header() {
             </Link>
           )}
 
-          {/* DarkMode TOggel */}
           <ThemeToggle />
           <UserButton session={session} />
         </div>
