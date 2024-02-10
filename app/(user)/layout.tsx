@@ -4,7 +4,7 @@ export default function UserLayout({
   children: React.ReactNode;
 }) {
   return (
-    <div className="flex flex-col flex-1 w-full max-w-6xl mx-auto">
+    <div className="flex flex-col flex-1 w-full max-w-6xl mx-auto min-h-screen">
       {children}
     </div>
   );

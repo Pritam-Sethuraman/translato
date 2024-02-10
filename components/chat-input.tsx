@@ -38,7 +38,9 @@ function ChatInput({ chatId }: Props) {
   });
 
   async function onSubmit(values: z.infer<typeof formSchema>) {
-    if (values.input.length === 0) {
+    const temporaryValue = values.input.trim();
+    form.reset();
+    if (temporaryValue.length === 0) {
       return;
     }
 
@@ -71,7 +73,6 @@ function ChatInput({ chatId }: Props) {
       });
       return;
     }
-    // ----
 
     const userToStore: User = {
       id: session.user.id!,
@@ -81,12 +82,10 @@ function ChatInput({ chatId }: Props) {
     };
 
     addDoc(messagesRef(chatId), {
-      input: values.input,
+      input: temporaryValue,
       timestamp: serverTimestamp(),
       user: userToStore,
     });
-
-    form.reset();
   }
 
   return (
