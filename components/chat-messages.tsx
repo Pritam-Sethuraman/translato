@@ -31,7 +31,7 @@ function ChatMessages({ chatId, initialMessages, session }: Props) {
   return (
     <div>
       {!loading && messages?.length === 0 && (
-        <div className="flex flex-col justify-center items-center p-20 rounded-xl space-y-2 bg-indigo-400 text-white font-extralight">
+        <div className="flex flex-col justify-center items-center p-10 rounded-xl space-y-2 bg-indigo-400 text-white font-extralight">
           <MessageCircleIcon className="h-10 w-10" />
           <h2>
             <span className="font-bold">Invite a friend</span> &{" "}
