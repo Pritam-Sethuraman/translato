@@ -29,7 +29,7 @@ export interface Message {
 const messageConverter: FirestoreDataConverter<Message> = {
   toFirestore: function (message: Message): DocumentData {
     return {
-      imput: message.input,
+      input: message.input,
       timestamp: message.timestamp,
       user: message.user,
     };

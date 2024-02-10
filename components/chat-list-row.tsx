@@ -33,8 +33,8 @@ function ChatListRow({ chatId }: Props) {
       className="flex items-center p-5 space-x-2 cursor-pointer hover:bg-gray-100 dark:hover:bg-slate-700"
     >
       <UserAvatar
-        name={message?.user.name || session?.user.name}
-        image={message?.user.image || session?.user.image}
+        name={message?.user.name || session?.user.name || ""}
+        image={message?.user.image || session?.user.image || ""}
       />
       <div className="flex-1">
         <p className="font-bold">
@@ -44,7 +44,7 @@ function ChatListRow({ chatId }: Props) {
         </p>
 
         <p>
-          {message?.translated?.[language] || "Get the conversatin started..."}
+          {message?.translated?.[language] || "Get the conversation started..."}
         </p>
       </div>
 
