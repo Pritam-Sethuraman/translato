@@ -7,10 +7,10 @@ import {
   DropdownMenuLabel,
   DropdownMenuSeparator,
   DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu";
+} from "@ui/dropdown-menu";
 import UserAvatar from "@/components/user-avatar";
 import { Session } from "next-auth";
-import { Button } from "./ui/button";
+import { Button } from "@ui/button";
 import { signIn, signOut } from "next-auth/react";
 import { useSubscriptionStore } from "@/store/store";
 import { Loader2, StarIcon } from "lucide-react";
