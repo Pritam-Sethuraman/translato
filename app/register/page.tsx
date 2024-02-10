@@ -6,6 +6,7 @@ type Props = {};
 
 async function RegisterPage({}: Props) {
   const session = await getServerSession(authOptions);
+
   return (
     <div className="isolate h-full overflow-hidden bg-gray-900 pb-40">
       <div className="mx-auto max-w-7xl px-6 pb-12 text-white text-center lg:px-8">

@@ -1,7 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import LogoImage from "@/public/logo.svg";
-import { AspectRatio } from "@/components/ui/aspect-ratio";
+import { AspectRatio } from "@ui/aspect-ratio";
 
 function Logo() {
   return (

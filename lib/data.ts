@@ -1,7 +1,7 @@
 export const tierData = [
   {
     name: "Starter",
-    id: "starter_id",
+    id: null,
     href: "#",
     priceMonthly: null,
     description: "Get chatting right away with anyone, anywhere",
@@ -15,7 +15,7 @@ export const tierData = [
   },
   {
     name: "Pro",
-    id: "laskdfoavkasldbf",
+    id: "mem_pro",
     href: "#",
     priceMonthly: "$4.99",
     description: "Unlock the Full Potential with Pro!",

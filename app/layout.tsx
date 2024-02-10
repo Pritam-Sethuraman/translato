@@ -4,6 +4,8 @@ import Header from "@/components/header";
 import { ThemeProvider } from "@/components/theme-provider";
 import ClientProvider from "@/components/client-provider";
 import FirebaseAuthProvider from "@/components/firebase-auth-provider";
+import SubscriptionProvider from "@/components/subscription-provider";
+import { Toaster } from "@/components/ui/toaster";
 
 export const metadata: Metadata = {
   title: "SaaS Translator App",
@@ -20,15 +22,20 @@ export default function RootLayout({
       <html lang="en">
         <body className="flex flex-col min-h-screen">
           <FirebaseAuthProvider>
-            <ThemeProvider
-              attribute="class"
-              defaultTheme="system"
-              enableSystem
-              disableTransitionOnChange
-            >
-              <Header />
-              {children}
-            </ThemeProvider>
+            <SubscriptionProvider>
+              <ThemeProvider
+                attribute="class"
+                defaultTheme="system"
+                enableSystem
+                disableTransitionOnChange
+              >
+                <Header />
+
+                {children}
+
+                <Toaster />
+              </ThemeProvider>
+            </SubscriptionProvider>
           </FirebaseAuthProvider>
         </body>
       </html>
