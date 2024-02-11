@@ -8,8 +8,8 @@ async function RegisterPage({}: Props) {
   const session = await getServerSession(authOptions);
 
   return (
-    <div className="isolate h-full overflow-hidden bg-gray-900 pb-40">
-      <div className="mx-auto max-w-7xl px-6 pb-12 text-white text-center lg:px-8">
+    <div className="isolate h-full overflow-hidden bg-gray-900 pb-40 md:min-h-screen">
+      <div className="mx-auto max-w-7xl px-6 pb-12 md:pt-28 text-white text-center lg:px-8">
         <div className="mx-auto max-w-4xl">
           <p className="mt-2 text-4xl font-bold tracking-tight sm:text-5xl">
             Lets handle your membership {session?.user?.name?.split(" ")?.[0]}!
