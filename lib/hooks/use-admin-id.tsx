@@ -14,7 +14,7 @@ function useAdminId({ chatId }: Props) {
         (doc) => doc.id
       )[0];
 
-      setAdminId(chatId);
+      setAdminId(adminId);
     };
 
     fetchAdminStatus();
