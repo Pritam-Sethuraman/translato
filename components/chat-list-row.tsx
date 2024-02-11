@@ -48,13 +48,13 @@ function ChatListRow({ chatId }: Props) {
         </p>
       </div>
 
-      <div>
+      <div className="text-right">
         <p>
           {message
             ? new Date(message.timestamp).toLocaleTimeString()
             : "No messages yet"}
         </p>
-        <p className="">chat #{prettyUUID()}</p>
+        <p>chat #{prettyUUID()}</p>
       </div>
     </div>
   );
